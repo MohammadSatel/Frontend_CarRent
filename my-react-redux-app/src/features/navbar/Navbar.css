@@ -1,0 +1,69 @@
+.colorful-navbar {
+    background-color: #2e552e; /* Darker green for increased contrast */
+    color: #FDFDFD; /* Light text for better readability */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif; /* Elegant and readable font */
+}
+
+.nav-links {
+    list-style: none; /* Remove list bullet points */
+    display: flex;
+    gap: 15px; /* Adjust gap between links */
+}
+
+.nav-links a {
+    color: inherit; /* Inherit light text color from parent */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em; /* Slightly larger font size */
+    padding-bottom: 5px; /* Add space for underline */
+    position: relative; /* Needed for underline */
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Underline thickness */
+    background-color: #4F9346; /* Darker green */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease-in-out; /* Fade in on hover */
+}
+
+.nav-links a:hover::after {
+    opacity: 1; /* Show underline on hover */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Adjust gap between buttons */
+}
+
+.auth-buttons button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em; /* Slightly larger font size */
+    transition: color 0.2s ease-in-out;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.auth-buttons button.login {
+    border: 1px solid #4F9346;
+    background-color: #4F9346; /* Darker green background for Login */
+}
+
+.auth-buttons button.logout,
+.auth-buttons button.register {
+    background-color: #2e552e; /* Same as navbar background */
+}
+
+.auth-buttons button.register {
+    color: #fdfdfd; /* Brighter text for Register button */
+}
