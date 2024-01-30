@@ -1,7 +1,6 @@
 ### frontend 
 
 ## open new terminal
-## cd frontend
 ## cd my-react-redux-app
 ## npm install --force
 ## npm start
