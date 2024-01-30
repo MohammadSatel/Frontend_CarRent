@@ -1,4 +1,3 @@
-/* ManagerComponent.css */
 .container {
     max-width: 600px;
     margin: auto;
@@ -52,8 +51,8 @@
     border-radius: 4px;
     background-color: #f9f9f9;
   }
-  /* ManagerComponent.css */
-.container {
+
+  .container {
     padding: 20px;
 }
 
@@ -76,13 +75,8 @@
 }
 
 
-/* ManagerComponent.css */
-/* Custom styles can go here. For example: */
 .card img.card-img-top {
     object-fit: cover;
-    height: 200px; /* Set a fixed height for images */
+    height: 200px; 
 }
 
-/* You can add responsiveness or more styling as needed */
-
-/* Add more custom styles as needed */

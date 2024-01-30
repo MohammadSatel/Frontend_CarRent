@@ -1,9 +1,10 @@
-// src/features/register/registerApi.ts
-
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8000'; // Replace with your backend API URL
 
+// Base URL for the API endpoint
+const BASE_URL = 'http://localhost:8000'; 
+
+// Function to register a new user using the API
 export const registerApi = async (newUser: any) => {
   try {
     const response = await axios.post(`${BASE_URL}/register/`, newUser);

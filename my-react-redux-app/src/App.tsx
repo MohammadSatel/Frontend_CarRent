@@ -11,6 +11,8 @@ import ForgotPassword from './components/ForgotPassword';
 import ManagerComponent from './components/ManagerComponent'; // Import ManagerComponent
 import './App.css';
 
+
+// Main App component where we define the routing for our application
 const App = () => {
   return (
     <BrowserRouter>
@@ -29,4 +31,5 @@ const App = () => {
   );
 };
 
+// Exporting the App component to be used in other parts of the application
 export default App;

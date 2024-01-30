@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 
+
+// Unit test for the App component
 test('renders learn react link', () => {
   const { getByText } = render(
     <Provider store={store}>
@@ -11,5 +13,6 @@ test('renders learn react link', () => {
     </Provider>
   );
 
+// Assert that the text matching the regex /learn/i is present in the document
   expect(getByText(/learn/i)).toBeInTheDocument();
 });

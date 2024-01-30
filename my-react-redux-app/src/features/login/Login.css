@@ -1,18 +1,17 @@
-/* Login.css */
 .login-container {
     max-width: 300px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f8f8f8;
+    background-color: #c8c8c8;
     text-align: center;
   }
   
   .login-title {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #3A405A;
   }
   
   .login-form {
@@ -30,8 +29,8 @@
   .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #3A405A;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;

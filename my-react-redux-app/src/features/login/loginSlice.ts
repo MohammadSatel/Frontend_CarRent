@@ -1,22 +1,22 @@
-// src/features/login/loginSlice.ts
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { loginApi } from './loginApi';
 import { login } from '../auth/authSlice';
 
+
+// Defines the shape of the user object for authentication
 interface AuthUser {
   is_superuser: AuthUser | null;
   id: number;
   username: string;
-  // Add other user details as needed
 }
 
+// Defines the expected response structure from the login API
 interface ApiResponse {
   access_token: string;
   user: AuthUser;
-  // Add other properties as needed
 }
 
+// State structure for the login feature
 interface LoginState {
   user: AuthUser | null;
   isAuthenticated: boolean;
@@ -24,6 +24,7 @@ interface LoginState {
   error: string | null;
 }
 
+// The initial state when the app loads
 const initialState: LoginState = {
   user: null,
   isAuthenticated: false,
@@ -31,6 +32,7 @@ const initialState: LoginState = {
   error: null,
 };
 
+// Async thunk to handle user login
 export const loginUser = createAsyncThunk('login/loginUser', async (credentials: any, { dispatch }) => {
   try {
     const response = await loginApi(credentials);
@@ -62,6 +64,7 @@ export const loginUser = createAsyncThunk('login/loginUser', async (credentials:
   }
 });
 
+// Async thunk to handle user logout
 export const logoutUser = createAsyncThunk<null, void, { rejectValue: string }>(
   'login/logoutUser',
   async (_, { rejectWithValue }) => {
@@ -75,6 +78,7 @@ export const logoutUser = createAsyncThunk<null, void, { rejectValue: string }>(
   }
 );
 
+// The loginSlice contains reducers and extra reducers for handling login and logout actions
 const loginSlice = createSlice({
   name: 'login',
   initialState,
@@ -108,4 +112,5 @@ const loginSlice = createSlice({
   },
 });
 
+// Export the reducer to be included in the store
 export default loginSlice.reducer;

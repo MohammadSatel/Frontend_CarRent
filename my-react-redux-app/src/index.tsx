@@ -6,9 +6,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+
+// Get the root DOM element and root object.
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+// Use the root object to render the application within <React.StrictMode> for additional checks and warnings in development.
 root.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -17,7 +20,5 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Call the reportWebVitals function to log out performance metrics.
 reportWebVitals();

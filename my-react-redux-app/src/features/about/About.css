@@ -1,10 +1,17 @@
 .page-content {
-    text-align: center; /* Centering content */
-    padding-top: 50px; /* Space from the top */
+    text-align: center;
+    padding: 2em 5%; /* Responsive vertical padding and fixed horizontal padding */
+    max-width: 800px; /* Maximum width for content */
+    margin: 0 auto; /* Center the content block horizontally */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Professional, clean font */
 }
 
 .centered-image {
-    max-width: 30%; /* Ensuring image doesn't overflow */
+    max-width: 60%; /* Responsive width */
+    max-width: 300px; /* Maximum size to maintain professionalism */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* Space below the image */
+    display: block;
+    margin: 20px auto; /* Center image horizontally with space above and below */
+    border: 1px solid #ddd; /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
 }

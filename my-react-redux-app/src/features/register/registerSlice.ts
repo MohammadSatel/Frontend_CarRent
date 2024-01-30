@@ -1,20 +1,22 @@
-// src/features/register/registerSlice.ts
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { registerApi } from './registerApi';
 
+
+// Interface to define the structure of the registration state
 interface RegisterState {
   user: any;
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
 }
 
+// The initial state for the registration slice
 const initialState: RegisterState = {
   user: null,
   status: 'idle',
   error: null,
 };
 
+// Asynchronous thunk action for registering a user
 export const registerUser = createAsyncThunk('register/registerUser', async (userData: any) => {
   try {
     const response = await registerApi(userData);
@@ -25,6 +27,7 @@ export const registerUser = createAsyncThunk('register/registerUser', async (use
   }
 });
 
+// Slice to handle user registration state and actions
 const registerSlice = createSlice({
   name: 'register',
   initialState,
@@ -47,4 +50,5 @@ const registerSlice = createSlice({
   },
 });
 
+// Export the reducer to be included in the store
 export default registerSlice.reducer;
