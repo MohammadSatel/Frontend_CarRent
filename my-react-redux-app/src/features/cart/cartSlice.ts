@@ -1,11 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
-// Moved TypeScript interfaces here
+
+// Interface defining the structure of a JWT token object
 export interface JwtToken {
   user_id: number;
 }
 
+// Interface defining the structure of an item in the shopping cart
 export interface CartItem {
   id: number;
   name: string;
@@ -13,14 +15,17 @@ export interface CartItem {
   quantity: number;
 }
 
+// Interface defining the state of the shopping cart
 interface CartState {
   items: CartItem[];
 }
 
+// The initial state of the cart when the application loads
 const initialState: CartState = {
   items: [],
 };
 
+// The cart slice containing reducers for actions related to the shopping cart
 export const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -43,6 +48,7 @@ export const cartSlice = createSlice({
   },
 });
 
+// Export the actions from the cart slice
 export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export const selectCart = (state: RootState) => state.cart;
 export default cartSlice.reducer;

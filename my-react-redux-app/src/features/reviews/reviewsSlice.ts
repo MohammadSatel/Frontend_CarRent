@@ -11,10 +11,10 @@ export interface Review {
 
 // The initial state for the reviews slice containing a list of review objects
 const initialState: Review[] = [
-  { id: 1, image: '/images/image1.png', text: 'Amazing product! Highly recommended for anyone looking for quality.', author: 'John Doe' },
-  { id: 2, image: '/images/image2.png', text: 'Exceptional service and fantastic quality. Will definitely buy again!', author: 'Jane Smith' },
-  { id: 3, image: '/images/image3.png', text: 'I am thoroughly impressed with the customer support. Highly satisfied!', author: 'Alice Johnson' },
-  { id: 4, image: '/images/image4.png', text: 'The product exceeded my expectations in every way. Great value for money!', author: 'Bob Brown' }
+  { id: 1, image: '/images/image1.jpg', text: 'Amazing car, it gets a lot of attention on the streets.', author: 'Uri Slava' },
+  { id: 2, image: '/images/image2.jpg', text: 'I kept this car after renting it, thank you for this service!', author: 'Karen Bomer' },
+  { id: 3, image: '/images/image3.jpg', text: 'I am impressed with the power of this car. Highly satisfied!', author: 'Dona Diego' },
+  { id: 4, image: '/images/image4.jpg', text: 'Great value for money! I will definetly use this service again.', author: 'Billy Rato' }
 ];
 
 // Creates a slice for reviews with the initial state and reducers

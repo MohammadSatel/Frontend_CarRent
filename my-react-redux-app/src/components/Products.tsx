@@ -31,6 +31,9 @@ const Products: React.FC = () => {
   return (
     <div className="container mt-5">
       <h2 className="text-center mb-4">Products</h2>
+      <p className="text-center mb-4">Prices are per day, gas and insurance is included</p>
+
+
       <div className="row justify-content-center">
         {products.map((product) => (
           <div key={product.id} className="col-md-4 mb-3">
@@ -48,7 +51,7 @@ const Products: React.FC = () => {
                   className="btn btn-outline-success"
                   onClick={() => handleBuyClick(product)}
                 >
-                  Buy
+                  Add to Cart
                 </button>
               </div>
             </div>

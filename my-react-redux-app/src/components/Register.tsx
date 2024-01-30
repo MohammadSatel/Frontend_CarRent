@@ -5,6 +5,8 @@ import { AppDispatch } from '../app/store';
 import { registerUser } from '../features/register/registerSlice';
 import '../features/register/Register.css'; // Import the CSS file for styling
 
+
+// Functional component for user registration
 const Register: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const [username, setUsername] = useState('');
@@ -12,6 +14,7 @@ const Register: React.FC = () => {
   const [password, setPassword] = useState('');
   const { status, error, user } = useSelector((state: RootState) => state.register);
 
+  // Handler function for the register button click event
   const handleRegister = async () => {
     try {
       const resultAction = await dispatch(registerUser({ username, email, password }));

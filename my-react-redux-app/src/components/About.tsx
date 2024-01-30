@@ -1,6 +1,7 @@
 import React from 'react';
 import '../features/about/About.css'; // Importing the CSS for styling
 
+
 const About = () => {
   return (
     <div className="page-content">
@@ -12,7 +13,7 @@ const About = () => {
 
       
       <br></br>
-      <img src="/images/image5.png" alt="About Page Image" className="centered-image"/>
+      <img src="/images/image5.png" alt="About Page Image" className="centered-image" width={500}/>
 
     </div>
   );
